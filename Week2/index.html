@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GDSC Hongik! 글자 색 변경</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  #gdsc-text {
+    font-size: 24px;
+    color: black;
+  }
+</style>
+</head>
+<body>
+
+<p id="gdsc-text">GDSC Hongik!</p>
+<button id="colorButton">색 변경</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var colorButton = document.getElementById('colorButton');
+    var gdscText = document.getElementById('gdsc-text');
+    
+    colorButton.addEventListener('click', function() {
+      if (gdscText.style.color === 'black') {
+        gdscText.style.color = 'blue';
+      } else {
+        gdscText.style.color = 'black';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
